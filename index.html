@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Tela Inicial -->
+        <div class="start-screen active">
+            <h1>Escape Digital</h1>
+            <p>Bem-vindo ao jogo de cibersegurança! Clique no botão abaixo para começar.</p>
+            <button onclick="startGame()">Iniciar Jogo</button>
+        </div>
+
+        <!-- Conteúdo do Jogo -->
+        <div class="game-container">
+            <h1>Escape Digital</h1>
+            <span class="tooltip-icon" onmouseenter="showTooltip()" onmouseleave="hideTooltip()">❓</span>
+            <div class="tooltip-text">Esta é a dica para ajudá-lo com esta fase.</div>
+
+            <p class="question-text"></p>
+            <input type="text" id="answerInput" placeholder="Digite sua resposta" style="display: none;">
+            <div class="choices" id="choicesContainer"></div>
+            <button id="submitBtn" onclick="submitAnswer()">Enviar Resposta</button>
+        </div>
+
+        <!-- Tela de Resultados -->
+        <div class="result-screen">
+            <h2>Resultado Final</h2>
+            <div id="resultDetails"></div>
+            <button onclick="resetGame()">Reiniciar Jogo</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
